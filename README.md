@@ -113,7 +113,7 @@ RLS、关系建模时更简单
 - Table:
 
 | 类型                           | 作用            | 特点                             | 举例             |
-|------------------------------|---------------|--------------------------------|----------------
+|------------------------------|---------------|--------------------------------|----------------|
 | Fact Table（事实表）              | 存储业务度量值/发生的事件 | 体积大、增长快，通常包含大量外键 + 数值型度量字段     | 销售订单、库存变动、生产记录 |
 | Dimension Table（维度表）         | 存储描述性上下文信息    | 相对稳定、变化慢，字段以文本/属性为主            | 客户、产品、时间、地区    |
 | Bridge Table（桥接表）            | 解决多对多关系       | 连接一个 Fact 和多个Dimension 之间的多值关系 | 一个订单对应多个促销活动   |
@@ -135,29 +135,24 @@ Periodic Snapshot Fact（周期性快照事实表）：按固定时间间隔（�
 Accumulating Snapshot
 Fact（累积快照事实表）：跟踪一个流程从开始到结束的多个里程碑，比如订单从下单→发货→签收的全过程，会随流程推进不断更新同一行
 
-
 ## Architecture Design
 
 ### DA Refinery: Data & Analytics Refinery
 
 Three Tier:
 
-| Tier | Name | Physical Form | Responsibility |
-|---|---|---|---|
-| First Tier | Refined Coat | Physical Table | Ingest from EDI Gold View + join/integrate across tables |
-| Second Tier | Sealer Coat | Physical Table / View | Additional processing, business rule correction, and enrichment as needed |
-| Third Tier | Top Coat | View | Final business modeling, serving BI consumption |
+| Tier        | Name         | Physical Form         | Responsibility                                                            |
+|-------------|--------------|-----------------------|---------------------------------------------------------------------------|
+| First Tier  | Refined Coat | Physical Table        | Ingest from EDI Gold View + join/integrate across tables                  |
+| Second Tier | Sealer Coat  | Physical Table / View | Additional processing, business rule correction, and enrichment as needed |
+| Third Tier  | Top Coat     | View                  | Final business modeling, serving BI consumption                           |
 
-
-
-
-| 传统概念 | 建议名称 | 作用 | 特点 | 举例 |
-|---|---|---|---|---|
-| Dimension | **Reference**(参考表) | 存储描述性上下文信息 | 相对稳定、变化慢，字段以文本/属性为主 | 客户、产品、时间、地区 |
-| Fact | **Metric**(指标表) | 存储业务度量值/发生的事件 | 体积大、增长快，通常包含大量外键 + 数值型度量字段 | 销售订单、库存变动、生产记录 |
-| Bridge | **Link**(关联表) | 解决多对多关系 | 连接一个 Metric 和多个 Reference 之间的多值关系 | 一个订单对应多个促销活动 |
-| Aggregate/Summary | **Rollup**(汇总表) | 预先计算好的聚合结果 | 提升查询性能，牺牲一定实时性 | 月度销售汇总、季度 KPI |
-
+| 传统概念              | 建议名称               | 作用            | 特点                                | 举例             |
+|-------------------|--------------------|---------------|-----------------------------------|----------------|
+| Dimension         | **Reference**(参考表) | 存储描述性上下文信息    | 相对稳定、变化慢，字段以文本/属性为主               | 客户、产品、时间、地区    |
+| Fact              | **Metric**(指标表)    | 存储业务度量值/发生的事件 | 体积大、增长快，通常包含大量外键 + 数值型度量字段        | 销售订单、库存变动、生产记录 |
+| Bridge            | **Link**(关联表)      | 解决多对多关系       | 连接一个 Metric 和多个 Reference 之间的多值关系 | 一个订单对应多个促销活动   |
+| Aggregate/Summary | **Rollup**(汇总表)    | 预先计算好的聚合结果    | 提升查询性能，牺牲一定实时性                    | 月度销售汇总、季度 KPI  |
 
 各层职责与对应表类型
 
@@ -166,7 +161,6 @@ Three Tier:
 | Refined Coat	 | Table	      | ✅ 需要	      | ✅ 需要	      | ❌ 不需要	  | ❌ 不需要  |
 | Sealer Coat	  | Table/View	 | ✅ 需要(修正后)	 | ✅ 需要(修正后)	 | ⚠️ 视情况	 | ❌ 不需要  |
 | Top Coat      | 	View	      | ✅ 需要	      | ✅ 需要	      | ✅ 需要    | 	✅ 需要  |
-
 
 OBJECT 名字前缀叫 `SW_APAC_RC` \ `SW_APAC_SC` \ `SW_APAC_TC`
 
@@ -178,3 +172,51 @@ OBJECT 名字前缀叫 `SW_APAC_RC` \ `SW_APAC_SC` \ `SW_APAC_TC`
 | Metric    | 	MET |
 | Link	     | LNK  |
 | Rollup	   | RUP  |
+
+## Project Description
+
+This initiative establishes a self-managed analytics
+architecture for the APAC Data & Analytics team, designed to
+operate independently of the Global EDI team's data pipeline
+while remaining fully dependent on their curated output as
+an upstream source.
+
+The architecture, internally referred to as **DA Refinery**,
+consumes the EDI Gold View as its entry point and processes
+data through a two-to-three-tier pipeline — **Refined Coat
+** (ingestion and cross-table integration), **Sealer Coat
+** (reserved for additional cleansing and business-rule
+correction as complexity grows), and **Top Coat** (final
+business-modeling views exposed for consumption). This
+design avoids duplicating EDI's upstream ETL work while
+giving the APAC team full control over business logic, data
+quality validation, and schema stability — insulating
+downstream reporting from unannounced upstream changes.
+
+Beyond the data architecture itself, the scope extends to
+all downstream analytical deliverables built on top of it:
+Power BI and Tableau dashboards, structured reports (
+including Finance-adjustment override logic for business
+units such as SEA WOOD and CHINA WOOD), Excel automated
+outputs, row-level security implementations, and supporting
+technical components such as incremental sync pipelines.
+
+To track and communicate this body of work in a structured,
+auditable way — similar to how RICE objects are cataloged in
+Oracle ERP implementations — all deliverables are organized
+under the **DRIVE** framework:
+
+- **D — Data Architecture**: the Refined Coat / Sealer
+  Coat / Top Coat pipeline itself
+- **R — Report**: structured, periodic business reports
+- **I — Insight**: interactive Power BI / Tableau dashboards
+- **V — Validation**: data quality checks and schema
+  validation safeguarding against upstream changes
+- **E — Extension**: supporting technical components (Excel
+  automation, RLS, sync pipelines, etc.)
+
+Each deliverable is assigned a unique ID under this
+taxonomy (e.g., `D-001`, `I-001`) for tracking,
+documentation, and stakeholder communication.
+
+
