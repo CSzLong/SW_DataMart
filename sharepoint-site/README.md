@@ -1,6 +1,13 @@
-# SW Data Mart — SharePoint Site Home Page Prototype
+# SW Data Mart — Portable SharePoint Home Page Package
 
-Open `index.html` locally to browse the multi-page SharePoint-style workspace.
+This package is designed to travel with the repository. On a company laptop, use it as the approved content and layout blueprint for a SharePoint Communication Site; no company account is required to review it locally.
+
+Two ways to use it:
+
+1. **Review the finished prototype locally.** Open `index.html` in a browser. It is a portable, multi-page Home Page prototype with working local navigation and template downloads.
+2. **Recreate it in SharePoint.** Follow [SHAREPOINT_MIGRATION_GUIDE.md](SHAREPOINT_MIGRATION_GUIDE.md). It maps every page section to standard SharePoint web parts and includes the recommended document-library structure.
+
+> SharePoint Modern pages do not import a standalone HTML file as a native page. The `index.html` file is the visual/content source of truth; recreate the same structure with standard web parts after uploading the documents to the destination site.
 
 Pages:
 
