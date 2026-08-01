@@ -6,6 +6,7 @@ This pack turns the README architecture into four controlled, English delivery s
 
 | Code | Document | Use it when |
 |---|---|---|
+| DRIVE-001 | Delivery Governance & Development Requirements | Defining a business requirement and connecting its business logic, development logic, validation and linked delivery documents |
 | DA-001 | Data Architecture Blueprint | Creating or changing data lineage, Top Coat objects, semantic model, or data dictionaries |
 | VI-001 | Dashboard Design Standard | Delivering a Power BI or Tableau dashboard |
 | RP-001 | Structured Report Design Standard | Delivering scheduled/historical reports or Finance overrides |
