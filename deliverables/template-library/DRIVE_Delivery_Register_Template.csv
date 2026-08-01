@@ -1,0 +1,2 @@
+DRIVE_ID,Title,Subject_Area,Class_IDs,Business_Owner,Technical_Owner,Status,Priority,Target_Release,Source_Contract,Top_Coat_Object,Validation_Status,Approval_Status,Document_Link,Notes
+DRIVE-###,[Enter title],[Subject],[DA-/VI-/RP-/EX- IDs],[Name],[Name],Draft,[High/Medium/Low],[yyyy-mm-dd],[EDI Gold View object],[SW_APAC_TC_...],[Not started/Pass/Fail],[Pending/Approved],[SharePoint link],[Notes]
