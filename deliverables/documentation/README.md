@@ -2,7 +2,7 @@
 
 ## Primary controlled document
 
-`DRIVE-001_Integrated_Technical_Design_Specification.docx` is the single primary development requirement and technical-design standard. It integrates the applicable DA, VI, RP and EX requirements into one RICE-inspired controlled document, with business logic, technical logic, lineage, semantic model, validation, operations and release controls.
+`DRIVE-001_Integrated_Technical_Design_Specification.docx` is the single primary development requirement and technical-design standard. It integrates the applicable DA, VI, RP and EX requirements into one controlled document, with business logic, technical logic, lineage, semantic model, validation, operations and release controls.
 
 ## Template Library
 

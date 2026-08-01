@@ -12,7 +12,7 @@ Two ways to use it:
 Pages:
 
 - Home — starting point and quick links
-- DRIVE Workspace — RICE-to-DRIVE terminology and request requirements
+- Request & Delivery — business request and delivery requirements
 - Architecture — lineage, RC/SC/TC and data objects
 - Governance — roles and release gates
 - Template Library — download location for staff templates

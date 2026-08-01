@@ -11,9 +11,9 @@ Create one Communication Site named **SW Data Mart | DRIVE Workspace**. Create t
 | Navigation label | SharePoint page name | Source prototype |
 |---|---|---|
 | Home | Home | `index.html` |
-| DRIVE Workspace | DRIVE Workspace | `pages/drive-workspace.html` |
-| Architecture | Architecture | `pages/architecture.html` |
-| Governance | Governance | `pages/governance.html` |
+| Request & Delivery | Request & Delivery | `pages/drive-workspace.html` |
+| How Data Is Prepared | How Data Is Prepared | `pages/architecture.html` |
+| Trust & Governance | Trust & Governance | `pages/governance.html` |
 | Template Library | Template Library | `pages/template-library.html` |
 
 ## Document library
@@ -45,20 +45,21 @@ Build the Home page in the following order. The wording is already available in 
 
 | Page section | Standard SharePoint web part | Configuration |
 |---|---|---|
-| Site banner | Hero | Large heading: *Build analytics as a controlled business capability.* Two calls-to-action: Template Library and Start a DRIVE request. |
-| Start here | Text + Quick Links | Three links: Register the business requirement, Use the integrated specification, Validate and release. |
+| Site banner | Hero | Large heading: *Turn trusted data into faster, consistent business decisions.* Two calls-to-action: Template Library and delivery journey. |
+| What SW Data Mart helps you do | Text + four-column section | Explain trusted answers, clear ownership, less manual work and safe change in business language. |
+| Start here | Text + Quick Links | Three links: Describe the business question, choose the delivery type, use the shared template. |
 | DRIVE delivery lifecycle | Text + five-column section | Register → Define → Design → Validate → Release & operate. |
 | Latest workspace updates | News or Text | Add the three current update cards from the local Home page. |
-| Quick access | Quick Links | DA Refinery architecture, Roles and approvals, Template Library. |
-| RICE terminology note | Call to Action or Text | Explain the replacement of RICE wording with DRIVE terms. |
+| Where the data comes from | Text + five-column section | Explain Global EDI Gold View, APAC consumption preparation, definitions, governed outputs and business value. |
+| Quick access | Quick Links | How Data Is Prepared, Trust & Governance, Template Library. |
 
 Use the title **SW Data Mart** and subtitle **DRIVE Workspace**. Keep the language in English for consistency with the design specification.
 
 ## Detail pages
 
-- **DRIVE Workspace:** use the `pages/drive-workspace.html` content. Add a prominent link to the active specification and a Quick Link to the delivery register.
-- **Architecture:** use `pages/architecture.html`. Present the EDI Gold View → Refined Coat → Sealer Coat → Top Coat lineage as a Process web part or simple text diagram.
-- **Governance:** use `pages/governance.html`. Use a table for role ownership and delivery gates.
+- **Request & Delivery:** use the `pages/drive-workspace.html` content. Add a prominent link to the active specification and a Quick Link to the delivery register.
+- **How Data Is Prepared:** use `pages/architecture.html`. Present the Global EDI Gold View → APAC consumption preparation → certified consumption view → business output flow as a Process web part.
+- **Trust & Governance:** use `pages/governance.html`. Use a table for role ownership and delivery gates.
 - **Template Library:** use `pages/template-library.html`. Add a **Document Library** web part filtered to `02 Staff Templates/` and `01 Active Specifications/`; this makes files downloadable without maintaining individual links.
 
 ## Build and handover checklist

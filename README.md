@@ -137,15 +137,15 @@ Fact（累积快照事实表）：跟踪一个流程从开始到结束的多个�
 
 ## Architecture Design
 
-### DA Refinery: Data & Analytics Refinery
+### APAC Consumption Architecture
 
-Three Tier:
+The Global EDI Gold View is the approved upstream data product. Global EDI owns source extraction and enterprise ETL. The following patterns describe only how APAC prepares that curated output for governed local consumption; they are not a second enterprise ingestion architecture.
 
-| Tier        | Name         | Physical Form         | Responsibility                                                            |
-|-------------|--------------|-----------------------|---------------------------------------------------------------------------|
-| First Tier  | Refined Coat | Physical Table        | Ingest from EDI Gold View + join/integrate across tables                  |
-| Second Tier | Sealer Coat  | Physical Table / View | Additional processing, business rule correction, and enrichment as needed |
-| Third Tier  | Top Coat     | View                  | Final business modeling, serving BI consumption                           |
+| Logical function | Existing object code | Physical form | Responsibility |
+|---|---|---|---|
+| Integration staging | RC | Physical table | Combine approved Gold View objects, retain source keys and audit attributes. Not a direct consumer source. |
+| Optional local harmonisation | SC | Physical table / view | Apply a justified APAC correction, mapping or enrichment where the business requirement needs it. |
+| Certified consumption view | TC | View | Publish stable business fields, approved measures and a serving contract for authorised consumption. |
 
 | 传统概念              | 建议名称               | 作用            | 特点                                | 举例             |
 |-------------------|--------------------|---------------|-----------------------------------|----------------|
@@ -156,11 +156,11 @@ Three Tier:
 
 各层职责与对应表类型
 
-| Tier	         | 物理形式	       | Reference  | 	Metric	   | Link	   | Rollup |
+| Logical function | 物理形式 | Reference | Metric | Link | Rollup |
 |---------------|-------------|------------|------------|---------|--------|
-| Refined Coat	 | Table	      | ✅ 需要	      | ✅ 需要	      | ❌ 不需要	  | ❌ 不需要  |
-| Sealer Coat	  | Table/View	 | ✅ 需要(修正后)	 | ✅ 需要(修正后)	 | ⚠️ 视情况	 | ❌ 不需要  |
-| Top Coat      | 	View	      | ✅ 需要	      | ✅ 需要	      | ✅ 需要    | 	✅ 需要  |
+| Integration staging (RC) | Table | ✅ 需要 | ✅ 需要 | ❌ 不需要 | ❌ 不需要 |
+| Optional local harmonisation (SC) | Table/View | ✅ 需要(修正后) | ✅ 需要(修正后) | ⚠️ 视情况 | ❌ 不需要 |
+| Certified consumption view (TC) | View | ✅ 需要 | ✅ 需要 | ✅ 需要 | ✅ 需要 |
 
 OBJECT 名字前缀叫 `SW_APAC_RC` \ `SW_APAC_SC` \ `SW_APAC_TC`
 
@@ -175,23 +175,21 @@ OBJECT 名字前缀叫 `SW_APAC_RC` \ `SW_APAC_SC` \ `SW_APAC_TC`
 
 ## Project Description
 
-This initiative establishes a self-managed analytics
-architecture for the APAC Data & Analytics team, designed to
-operate independently of the Global EDI team's data pipeline
-while remaining fully dependent on their curated output as
-an upstream source.
+This initiative establishes a governed consumption capability
+for the APAC Data & Analytics team. It uses the Global EDI
+team's curated output as its approved upstream source while
+keeping source extraction and enterprise ETL ownership with
+Global EDI.
 
-The architecture, internally referred to as **DA Refinery**,
-consumes the EDI Gold View as its entry point and processes
-data through a two-to-three-tier pipeline — **Refined Coat
-** (ingestion and cross-table integration), **Sealer Coat
-** (reserved for additional cleansing and business-rule
-correction as complexity grows), and **Top Coat** (final
-business-modeling views exposed for consumption). This
-design avoids duplicating EDI's upstream ETL work while
-giving the APAC team full control over business logic, data
-quality validation, and schema stability — insulating
-downstream reporting from unannounced upstream changes.
+The approved entry point is the **Global EDI Gold View**.
+APAC applies only the documented local preparation required
+to make that curated data usable and stable for downstream
+consumers. Existing RC / SC / TC object names may be used for
+implementation traceability: integration staging, optional
+local harmonisation, and certified consumption views. This
+does not recreate Global EDI's upstream ETL work; it provides
+APAC ownership of business logic, data-quality validation,
+semantic stability and the downstream consumer contract.
 
 Beyond the data architecture itself, the scope extends to
 all downstream analytical deliverables built on top of it:
@@ -202,12 +200,11 @@ outputs, row-level security implementations, and supporting
 technical components such as incremental sync pipelines.
 
 To track and communicate this body of work in a structured,
-auditable way — similar to how RICE objects are cataloged in
-Oracle ERP implementations — all deliverables are organized
-under the **DRIVE** framework:
+auditable way, all deliverables are organized under the
+**DRIVE** framework:
 
-- **D — Data Architecture**: the Refined Coat / Sealer
-  Coat / Top Coat pipeline itself
+- **D — Data Architecture**: the governed consumption data
+  contract and its lineage
 - **R — Report**: structured, periodic business reports
 - **I — Insight**: interactive Power BI / Tableau dashboards
 - **V — Validation**: data quality checks and schema
@@ -218,5 +215,3 @@ under the **DRIVE** framework:
 Each deliverable is assigned a unique ID under this
 taxonomy (e.g., `D-001`, `I-001`) for tracking,
 documentation, and stakeholder communication.
-
-
