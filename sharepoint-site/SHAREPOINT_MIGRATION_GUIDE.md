@@ -18,7 +18,7 @@ Create one Communication Site named **SW Data Mart | DRIVE Workspace**. Create t
 
 ## Document library
 
-Create a document library called **SW Data Mart Delivery Assets**. Create these folders:
+From **Site contents**, create a new document library called **SW Data Mart Delivery Assets**. It sits at the same site level as the default **Documents** library; it is **not** a folder inside Documents. Create these folders inside the new library:
 
 ```text
 01 Active Specifications/
@@ -38,6 +38,9 @@ Upload the following repository content:
 | `02 Staff Templates/` | `deliverables/template-library/IV_Insight_and_Visualisation_Design_Template.docx` | Insight & Visualisation design template |
 | `02 Staff Templates/` | `deliverables/template-library/RP_Structured_Report_Design_Template.docx` | Structured Report design template |
 | `02 Staff Templates/` | `deliverables/template-library/EX_Extension_and_Integration_Design_Template.docx` | Extension & Integration design template |
+| `02 Staff Templates/` | `deliverables/template-library/DM_Data_Model_Template.xlsx` | Data Model workbook template |
+| `02 Staff Templates/` | `deliverables/template-library/DL_Data_Lineage_Template.xlsx` | Data Lineage workbook template |
+| `02 Staff Templates/` | `deliverables/template-library/DD_Data_Dictionary_Template.xlsx` | Data Dictionary workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | Initial register/list structure |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` | Historical component standards |
 
@@ -69,7 +72,7 @@ Use the title **SW Data Mart** and subtitle **DRIVE Workspace**. Keep the langua
 ## Build and handover checklist
 
 - [ ] Confirm the Communication Site owner and members.
-- [ ] Upload the four asset groups and apply metadata.
+- [ ] Upload the five asset groups and apply metadata.
 - [ ] Create the five pages and top navigation.
 - [ ] Replace prototype file links with document-library links.
 - [ ] Verify that staff can download templates but only authorised owners can edit master specifications.
