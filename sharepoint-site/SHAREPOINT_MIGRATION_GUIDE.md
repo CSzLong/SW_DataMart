@@ -32,16 +32,16 @@ Upload the following repository content:
 
 | SharePoint location | Repository source | Purpose |
 |---|---|---|
-| `01 Active Specifications/` | Approved DA-100 and DA-200 instances for each relevant `DRIVE-###` | Controlled enhancement design records |
+| `01 Active Specifications/` | Approved DA-100 and TD-200 instances for each relevant `DRIVE-###` | Controlled enhancement design records |
 | `02 Staff Templates/` | `deliverables/template-library/DA-100_Data_Architecture_Design_Template.docx` | Data Architecture Design template |
-| `02 Staff Templates/` | `deliverables/template-library/DA-200_Data_Analytics_Delivery_Design_Template.docx` | Integrated delivery design: business logic, Top Coat, IV/RP/EX, UAT and release |
+| `02 Staff Templates/` | `deliverables/template-library/TD-200_Technical_Design_Template.docx` | Integrated technical design: business logic, Top Coat, Report/Insight/Validation/Extension, UAT and release |
 | `02 Staff Templates/` | `deliverables/template-library/DM_Data_Model_Template.xlsx` | Data Model workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DL_Data_Lineage_Template.xlsx` | Data Lineage workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DD_Data_Dictionary_Template.xlsx` | Data Dictionary workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | Initial register/list structure |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` | Historical component standards |
 
-DRIVE is an enhancement ID, not a Word document type. Recommended library metadata: **Asset Type**, **DRIVE ID**, **End User**, **PMO Manager**, **Technical Analyst**, **ERP Consultant**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
+DRIVE is both the enhancement identifier and the delivery framework: **D — Data Architecture** (the governed consumption data contract and its lineage); **R — Report** (structured, periodic business reports); **I — Insight** (interactive Power BI / Tableau dashboards); **V — Validation** (data quality checks and schema validation safeguarding against upstream changes); and **E — Extension** (supporting technical components such as Excel automation, RLS and sync pipelines). Recommended library metadata: **Asset Type**, **DRIVE ID**, **End User**, **PMO Manager**, **Technical Analyst**, **ERP Consultant**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
 
 ## Home Page build sheet
 
@@ -51,6 +51,7 @@ Build the Home page in the following order. The wording is already available in 
 |---|---|---|
 | Site banner | Hero | Large heading: *Turn trusted data into faster, consistent business decisions.* Two calls-to-action: Template Library and delivery journey. |
 | What SW Data Mart helps you do | Text + four-column section | Explain trusted answers, clear ownership, less manual work and safe change in business language. |
+| Why the framework is called DRIVE | Text + five-column section | Define Data Architecture, Report, Insight, Validation and Extension in plain business language. |
 | Start here | Text + Quick Links | Three links: Describe the business question, choose the delivery type, use the shared template. |
 | DRIVE delivery lifecycle | Text + five-column section | Register → Define → Design → Validate → Release & operate. |
 | Latest workspace updates | News or Text | Add the three current update cards from the local Home page. |
@@ -61,10 +62,10 @@ Use the title **SW Data Mart** and subtitle **DRIVE Workspace**. Keep the langua
 
 ## Detail pages
 
-- **Request & Delivery:** use the `pages/drive-workspace.html` content. Add a prominent link to the active specification and a Quick Link to the delivery register.
-- **How Data Is Prepared:** use `pages/architecture.html`. Present the Global EDI Gold View → Refined Coat (RC) → Sealer Coat (SC) → Top Coat (TC) → business output flow as a Process web part, and state the Global EDI ownership boundary.
-- **Trust & Governance:** use `pages/governance.html`. Use a table for role ownership and delivery gates.
-- **Template Library:** use `pages/template-library.html`. Add a **Document Library** web part filtered to `02 Staff Templates/` and `01 Active Specifications/`; this makes files downloadable without maintaining individual links.
+- **Request & Delivery:** use the `pages/drive-workspace.html` content. Add the five-part DRIVE definition, a prominent link to the active specification and a Quick Link to the delivery register.
+- **How Data Is Prepared:** use `pages/architecture.html`. Present the Global EDI Gold View → Refined Coat (RC) → Sealer Coat (SC) → Top Coat (TC) → business output flow as a Process web part, state the Global EDI ownership boundary and include the five-part DRIVE definition.
+- **Trust & Governance:** use `pages/governance.html`. Use a table for role ownership and delivery gates, and include the five-part DRIVE definition.
+- **Template Library:** use `pages/template-library.html`. Include the five-part DRIVE definition, and add a **Document Library** web part filtered to `02 Staff Templates/` and `01 Active Specifications/`; this makes files downloadable without maintaining individual links.
 
 ## Build and handover checklist
 

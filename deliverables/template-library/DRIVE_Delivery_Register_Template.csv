@@ -1,2 +1,2 @@
 DRIVE_ID,Title,Subject_Area,Component_Documents,End_User,PMO_Manager,Technical_Analyst,ERP_Consultant,Status,Priority,Target_Release,Global_EDI_Gold_View,Coat_Objects,Validation_Status,Approval_Status,DRIVE_Document_Link,Notes
-DRIVE-###,[Enter title],[Subject],[DA-/IV-/RP-/EX- document names or IDs],[Name],[Name],[Name],[Name],Draft,[High/Medium/Low],[yyyy-mm-dd],[Gold View object],[SW_APAC_RC_/SC_/TC_...],[Not started/Pass/Fail],[Pending/Approved],[SharePoint link],[Notes]
+DRIVE-###,[Enter title],[Subject],[DA-100 / TD-200 document names or IDs],[Name],[Name],[Name],[Name],Draft,[High/Medium/Low],[yyyy-mm-dd],[Gold View object],[SW_APAC_RC_/SC_/TC_...],[Not started/Pass/Fail],[Pending/Approved],[SharePoint link],[Notes]

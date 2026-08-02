@@ -73,8 +73,8 @@
 
 | 目标文件夹 | 上传内容 |
 |---|---|
-| `01 Active Specifications/` | 每个 `DRIVE-###` 相关的已批准 DA-100 / DA-200 文档实例 |
-| `02 Staff Templates/` | `DA-100_Data_Architecture_Design_Template.docx`、`DA-200_Data_Analytics_Delivery_Design_Template.docx` |
+| `01 Active Specifications/` | 每个 `DRIVE-###` 相关的已批准 DA-100 / TD-200 文档实例 |
+| `02 Staff Templates/` | `DA-100_Data_Architecture_Design_Template.docx`、`TD-200_Technical_Design_Template.docx` |
 | `02 Staff Templates/` | `DM_Data_Model_Template.xlsx`、`DL_Data_Lineage_Template.xlsx`、`DD_Data_Dictionary_Template.xlsx` |
 | `02 Staff Templates/` | `DRIVE_Delivery_Register_Template.csv` |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` 中的历史参考内容 |
@@ -92,7 +92,7 @@
 
 | 列名 | 类型 | 建议值 / 用途 |
 |---|---|---|
-| Asset Type | Choice | DA-100 / DA-200 / DM / DL / DD / Evidence / Standard |
+| Asset Type | Choice | DA-100 / TD-200 / DM / DL / DD / Evidence / Standard |
 | DRIVE ID | Single line of text | 例如 `DRIVE-001` |
 | End User | Person or Group | 业务验收联系人 |
 | PMO Manager | Person or Group | 范围、优先级与发布协调责任人 |
@@ -127,7 +127,7 @@ Communication Site 通常已经有一个 Home Page。选择右上角 **Edit** �
 | 1 | Hero 或 Text | 放置一句核心价值：`Turn trusted data into faster, consistent business decisions.` |
 | 2 | Text + 四栏 Section | 填写 `index.html` 中 “What SW Data Mart helps you do” 的业务价值说明。 |
 | 3 | Text + Quick Links | 建立三个入口：Describe the business question、Choose the delivery type、Use the shared template。 |
-| 4 | Text + 五栏 Section | 展示 DRIVE 生命周期：Register → Define → Design → Validate → Release & operate。 |
+| 4 | Text + 五栏 Section | 解释 DRIVE：Data Architecture、Report、Insight、Validation、Extension；随后展示生命周期：Register → Define → Design → Validate → Release & operate。 |
 | 5 | News 或 Text | 复制本地首页的三张 latest update 卡片；没有正式更新时可隐藏此区。 |
 | 6 | Text + 五栏 Section | 放置 Global EDI ownership 和 Coat 说明。 |
 | 7 | Quick Links | 指向 How Data Is Prepared、Trust & Governance、Template Library。 |
@@ -158,8 +158,8 @@ Communication Site 通常已经有一个 Home Page。选择右上角 **Edit** �
 - **Page name：**`Request & Delivery`
 - **本地内容来源：**`pages/drive-workspace.html`
 - **建议 Web Parts：**Text、Quick Links、Document Library、Microsoft Lists（如组织允许）。
-- **内容顺序：**业务问题 → DRIVE enhancement ID 说明 → DA-100 / DA-200 的适用条件 → 当前已批准设计链接 → delivery register 链接。
-- **链接：**把 active DA-100 / DA-200 specification 链接到 `01 Active Specifications/`；把 register 链接到 `02 Staff Templates/` 或正式 Microsoft List。
+- **内容顺序：**业务问题 → DRIVE 五部分含义 → DRIVE enhancement ID 说明 → DA-100 / TD-200 的适用条件 → 当前已批准设计链接 → delivery register 链接。
+- **链接：**把 active DA-100 / TD-200 specification 链接到 `01 Active Specifications/`；把 register 链接到 `02 Staff Templates/` 或正式 Microsoft List。
 
 ### 6.2 How Data Is Prepared
 
@@ -189,7 +189,7 @@ Communication Site 通常已经有一个 Home Page。选择右上角 **Edit** �
   3. 选择 `SW Data Mart Delivery Assets`。
   4. 在 Web Part 设置中选择 `Current Templates` view，或指定 `02 Staff Templates/` 文件夹。
   5. 选择 Apply；完成页面后选择 Publish。
-- **页面说明：**先写 DRIVE 是 enhancement ID，然后说明 DA-100、DA-200、DM、DL、DD 的用途；DA-200 内部包含适用的 IV、RP、EX 章节。
+- **页面说明：**先写 DRIVE 的五部分含义和 enhancement ID，然后说明 DA-100、TD-200、DM、DL、DD 的用途；TD-200 内部包含适用的 Report、Insight、Validation、Extension 章节。
 
 ## 7. 配置顶部导航
 
@@ -234,7 +234,7 @@ Communication Site 通常已经有一个 Home Page。选择右上角 **Edit** �
 
 - [ ] `SW Data Mart Delivery Assets` 是独立 Library，与 Documents 同级。
 - [ ] 五个资产文件夹均已创建。
-- [ ] DRIVE、DA、IV、RP、EX、DM、DL、DD 模板可下载。
+- [ ] DA-100、TD-200、DM、DL、DD 模板可下载，并且各页面均展示 DRIVE 的五部分含义。
 - [ ] Template Library 页面中的 Document Library Web Part 显示正确 View/Folder。
 - [ ] active specification、register 与证据文件有正确的 DRIVE ID。
 

@@ -46,16 +46,16 @@
 
 | SharePoint 位置 | 仓库来源 | 用途 |
 |---|---|---|
-| `01 Active Specifications/` | 每个相关 `DRIVE-###` 对应的已批准 DA-100 / DA-200 实例 | 受控的 enhancement 设计记录 |
+| `01 Active Specifications/` | 每个相关 `DRIVE-###` 对应的已批准 DA-100 / TD-200 实例 | 受控的 enhancement 设计记录 |
 | `02 Staff Templates/` | `deliverables/template-library/DA-100_Data_Architecture_Design_Template.docx` | Data Architecture Design 模板 |
-| `02 Staff Templates/` | `deliverables/template-library/DA-200_Data_Analytics_Delivery_Design_Template.docx` | 一体化交付设计模板：业务逻辑、Top Coat、IV/RP/EX、UAT 与发布 |
+| `02 Staff Templates/` | `deliverables/template-library/TD-200_Technical_Design_Template.docx` | 一体化技术设计模板：业务逻辑、Top Coat、Report/Insight/Validation/Extension、UAT 与发布 |
 | `02 Staff Templates/` | `deliverables/template-library/DM_Data_Model_Template.xlsx` | Data Model Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DL_Data_Lineage_Template.xlsx` | Data Lineage Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DD_Data_Dictionary_Template.xlsx` | Data Dictionary Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | 初始 DRIVE register / List 结构 |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` | 历史组件标准，仅作参考 |
 
-DRIVE 是 enhancement 编号，不是 Word 文档类型。建议建立的 Document Library metadata：**Asset Type、DRIVE ID、End User、PMO Manager、Technical Analyst、ERP Consultant、Status、Effective Date、Review Date、Confidentiality**。
+DRIVE 既是 enhancement 编号，也是完整交付框架：**D — Data Architecture**（受治理的消费数据契约与数据血缘）、**R — Report**（结构化、周期性业务报表）、**I — Insight**（交互式 Power BI / Tableau Dashboard）、**V — Validation**（防止上游变更影响的数据质量与 schema 验证）及 **E — Extension**（Excel 自动化、RLS、同步管道等技术组件）。建议建立的 Document Library metadata：**Asset Type、DRIVE ID、End User、PMO Manager、Technical Analyst、ERP Consultant、Status、Effective Date、Review Date、Confidentiality**。
 
 ## Home Page 搭建顺序
 
