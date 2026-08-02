@@ -16,12 +16,12 @@
 
   <h2>1. 一句话说明架构</h2>
   <p>SW Data Mart 的作用是：在<strong>不重复 Global EDI 上游数据工程</strong>的前提下，把已经发布的 Gold View 转成 APAC 可稳定使用、可追溯、可解释的数据产品，并交付 Dashboard、Report、权限设计及 Power Platform 集成。</p>
-  <div class="flow"><span>Global EDI Gold View</span><b>→</b><span>Refined Coat (RC)</span><b>→</b><span>Sealer Coat (SC)</span><b>→</b><span>Top Coat (TC)</span><b>→</b><span>DA / IV / RP / EX</span></div>
+  <div class="flow"><span>Global EDI Gold View</span><b>→</b><span>Refined Coat (RC)</span><b>→</b><span>Sealer Coat (SC)</span><b>→</b><span>Top Coat (TC)</span><b>→</b><span>DA-100 / DA-200</span></div>
   <table><thead><tr><th>位置</th><th>中文理解</th><th>责任与输出</th></tr></thead><tbody>
     <tr><td>Global EDI Gold View</td><td>上游已整理好的来源契约</td><td>Global EDI 负责其数据仓库、Gold View 和上游 ETL。</td></tr>
     <tr><td>RC</td><td>接入并整合</td><td>APAC 受控接入 Gold View，保留来源键与加载审计信息。</td></tr>
     <tr><td>SC</td><td>修正、标准化、补充业务规则</td><td>处理数据质量、映射、例外和重复运行控制；DA 文档到这里为止。</td></tr>
-    <tr><td>TC</td><td>供消费的数据与语义出口</td><td>为 IV、RP、EX 提供稳定、业务友好的表、视图或语义模型。</td></tr>
+    <tr><td>TC</td><td>供消费的数据与语义出口</td><td>为 DA-200 中适用的 IV、RP、EX 章节提供稳定、业务友好的表、视图或语义模型。</td></tr>
   </tbody></table>
   <div class="do-not"><strong>语言边界：</strong>对外材料不要将 RC / SC / TC 说成一个新的企业数据仓库或 Global EDI 的重复工作。统一说：APAC consumes the Global EDI Gold View and maintains local consumption objects through Refined / Sealer / Top Coat.</div>
 
@@ -29,7 +29,7 @@
   <p>当前 <code>sharepoint-site</code> 文件夹是一个可本地浏览的<strong>内容与信息架构蓝图</strong>，不是可以直接上传后自动变成 SharePoint Modern Site 的安装包。它的作用是让你在公司电脑上按相同的页面、英文内容、菜单和下载入口迁移到正式 Site。</p>
   <table><thead><tr><th>本地页面</th><th>要向谁说明什么</th><th>正式 SharePoint 的建议实现</th></tr></thead><tbody>
     <tr><td>Home</td><td>先让 End User 明白此架构能做什么，以及不会重复 Global EDI 的工作。</td><td>Communication Site 首页；Hero、Text、Quick Links。</td></tr>
-    <tr><td>Request &amp; Delivery</td><td>说明 DRIVE 如何管理一个 enhancement，并指向 DA / IV / RP / EX。</td><td>普通 Site Page；Text、Document Library 或 List 链接。</td></tr>
+    <tr><td>Request &amp; Delivery</td><td>说明 DRIVE 是 enhancement ID，并指向 DA-100 / DA-200。</td><td>普通 Site Page；Text、Document Library 或 List 链接。</td></tr>
     <tr><td>How Data Is Prepared</td><td>说明 Gold View 到 RC / SC / TC 的数据路径与文档分工。</td><td>普通 Site Page；Text、图片/流程图、Quick Links。</td></tr>
     <tr><td>Trust &amp; Governance</td><td>说明四个角色的责任与决策边界。</td><td>普通 Site Page；Text、List 或轻量表格。</td></tr>
     <tr><td>Template Library</td><td>供团队下载 Word 与 Excel 模板。</td><td>Document Library 页面或 Page + Document Library Web Part。</td></tr>
@@ -45,10 +45,10 @@
 
   <h2>3. 建议的 SharePoint 文档库结构</h2>
   <table><thead><tr><th>文件夹 / Library</th><th>放置内容</th><th>维护规则</th></tr></thead><tbody>
-    <tr><td>01 — Enhancement Designs</td><td>已批准的 DRIVE 文档与最终截图。</td><td>每个 enhancement 一个 DRIVE ID；DRIVE 内维护 DA / IV / RP / EX 文件名或链接。</td></tr>
-    <tr><td>02 — Component Designs</td><td>DA、IV、RP、EX 工作文档。</td><td>按 Subject Area 或 DRIVE ID 分类；发布后保留版本历史。</td></tr>
+    <tr><td>01 — Enhancement Designs</td><td>已批准的 DA-100 / DA-200 文档与最终截图。</td><td>每个 enhancement 一个 DRIVE ID；DA-200 维护 IV / RP / EX 的适用内容、证据与链接。</td></tr>
+    <tr><td>02 — Component Designs</td><td>DA-100、DA-200 工作文档。</td><td>按 Subject Area 或 DRIVE ID 分类；发布后保留版本历史。</td></tr>
     <tr><td>03 — Data Foundations</td><td>DM、DL、DD 三个 Excel 工作簿。</td><td>每个 Subject Area 一套；Data Model、Lineage、Dictionary 同步更新。</td></tr>
-    <tr><td>04 — Templates</td><td>空白 Word / Excel 模板和 DRIVE register。</td><td>Technical Analyst 维护模板版本；团队下载副本后填写。</td></tr>
+    <tr><td>04 — Templates</td><td>DA-100、DA-200 Word 模板、Excel 模板和 DRIVE register。</td><td>Technical Analyst 维护模板版本；团队下载副本后填写。</td></tr>
     <tr><td>05 — Evidence &amp; Release</td><td>UAT、对账、截图、发布记录。</td><td>与 DRIVE ID 关联；不要放临时代码和敏感原始数据。</td></tr>
   </tbody></table>
 
@@ -59,7 +59,7 @@
     <tr><td>2</td><td>Global EDI 与 APAC 的职责边界</td><td>Global EDI 负责 Gold View 和上游 ETL；APAC 负责消费与下游稳定性。</td></tr>
     <tr><td>3–5</td><td>数据路径与三个 Coat</td><td>RC 接入整合；SC 修正补充；TC 提供业务可用出口。</td></tr>
     <tr><td>4 / 6–8</td><td>Lineage、语义模型、对象及审计字段</td><td>字段、指标、Reference / Rollup、WHO / WHEN 都可以解释和追溯。</td></tr>
-    <tr><td>9–10</td><td>四类交付与文档包</td><td>DA、IV、RP、EX 共享 TC 基础；DRIVE 是 overall enhancement design。</td></tr>
+    <tr><td>9–10</td><td>交付与文档包</td><td>DA-100 管理架构；DA-200 整合 IV、RP、EX；DRIVE 是 enhancement ID。</td></tr>
     <tr><td>11</td><td>四个角色</td><td>只有 End User、PMO Manager、Technical Analyst、ERP Consultant。</td></tr>
     <tr><td>12</td><td>下一步</td><td>先选 Subject Area，建设基础对象与控制证据，然后扩展可复用交付。</td></tr>
   </tbody></table>
@@ -75,7 +75,7 @@
   <h2>5. 发布前个人检查清单</h2><ul class="check">
     <li>Home Page 是否清楚说明 Global EDI Gold View 的责任边界？</li>
     <li>是否统一使用 Refined Coat / Sealer Coat / Top Coat，以及 RC / SC / TC？</li>
-    <li>DRIVE 是否列出全部适用的 DA / IV / RP / EX 文件名或链接？</li>
+    <li>DRIVE ID 是否关联了全部适用的 DA-100 / DA-200 文件名或链接？</li>
     <li>DM、DL、DD 是否已与实际 TC 对象、字段、指标和转换逻辑同步？</li>
     <li>WHO / WHEN、Reference、Rollup、业务粒度和访问限制是否已记录？</li>
     <li>角色是否只保留 End User、PMO Manager、Technical Analyst、ERP Consultant？</li>

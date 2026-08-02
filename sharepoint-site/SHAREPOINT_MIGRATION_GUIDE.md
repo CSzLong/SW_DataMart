@@ -32,19 +32,16 @@ Upload the following repository content:
 
 | SharePoint location | Repository source | Purpose |
 |---|---|---|
-| `01 Active Specifications/` | `deliverables/documentation/DRIVE-001_Integrated_Technical_Design_Specification.docx` | Current governed master specification |
-| `02 Staff Templates/` | `deliverables/template-library/DRIVE_Integrated_Technical_Design_Template.docx` | Overall DRIVE enhancement design |
-| `02 Staff Templates/` | `deliverables/template-library/DA_Data_Architecture_Design_Template.docx` | Data Architecture design template |
-| `02 Staff Templates/` | `deliverables/template-library/IV_Insight_and_Visualisation_Design_Template.docx` | Insight & Visualisation design template |
-| `02 Staff Templates/` | `deliverables/template-library/RP_Structured_Report_Design_Template.docx` | Structured Report design template |
-| `02 Staff Templates/` | `deliverables/template-library/EX_Extension_and_Integration_Design_Template.docx` | Extension & Integration design template |
+| `01 Active Specifications/` | Approved DA-100 and DA-200 instances for each relevant `DRIVE-###` | Controlled enhancement design records |
+| `02 Staff Templates/` | `deliverables/template-library/DA-100_Data_Architecture_Design_Template.docx` | Data Architecture Design template |
+| `02 Staff Templates/` | `deliverables/template-library/DA-200_Data_Analytics_Delivery_Design_Template.docx` | Integrated delivery design: business logic, Top Coat, IV/RP/EX, UAT and release |
 | `02 Staff Templates/` | `deliverables/template-library/DM_Data_Model_Template.xlsx` | Data Model workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DL_Data_Lineage_Template.xlsx` | Data Lineage workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DD_Data_Dictionary_Template.xlsx` | Data Dictionary workbook template |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | Initial register/list structure |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` | Historical component standards |
 
-Recommended library metadata: **Asset Type**, **DRIVE ID**, **End User**, **PMO Manager**, **Technical Analyst**, **ERP Consultant**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
+DRIVE is an enhancement ID, not a Word document type. Recommended library metadata: **Asset Type**, **DRIVE ID**, **End User**, **PMO Manager**, **Technical Analyst**, **ERP Consultant**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
 
 ## Home Page build sheet
 

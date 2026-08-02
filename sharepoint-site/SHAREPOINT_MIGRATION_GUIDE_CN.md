@@ -46,19 +46,16 @@
 
 | SharePoint 位置 | 仓库来源 | 用途 |
 |---|---|---|
-| `01 Active Specifications/` | `deliverables/documentation/DRIVE-001_Integrated_Technical_Design_Specification.docx` | 当前已治理的 DRIVE 总体设计规格 |
-| `02 Staff Templates/` | `deliverables/template-library/DRIVE_Integrated_Technical_Design_Template.docx` | DRIVE enhancement 总体设计模板 |
-| `02 Staff Templates/` | `deliverables/template-library/DA_Data_Architecture_Design_Template.docx` | DA 模板 |
-| `02 Staff Templates/` | `deliverables/template-library/IV_Insight_and_Visualisation_Design_Template.docx` | IV 模板 |
-| `02 Staff Templates/` | `deliverables/template-library/RP_Structured_Report_Design_Template.docx` | RP 模板 |
-| `02 Staff Templates/` | `deliverables/template-library/EX_Extension_and_Integration_Design_Template.docx` | EX 模板 |
+| `01 Active Specifications/` | 每个相关 `DRIVE-###` 对应的已批准 DA-100 / DA-200 实例 | 受控的 enhancement 设计记录 |
+| `02 Staff Templates/` | `deliverables/template-library/DA-100_Data_Architecture_Design_Template.docx` | Data Architecture Design 模板 |
+| `02 Staff Templates/` | `deliverables/template-library/DA-200_Data_Analytics_Delivery_Design_Template.docx` | 一体化交付设计模板：业务逻辑、Top Coat、IV/RP/EX、UAT 与发布 |
 | `02 Staff Templates/` | `deliverables/template-library/DM_Data_Model_Template.xlsx` | Data Model Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DL_Data_Lineage_Template.xlsx` | Data Lineage Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DD_Data_Dictionary_Template.xlsx` | Data Dictionary Excel 模板 |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | 初始 DRIVE register / List 结构 |
 | `03 Reference Standards/` | `deliverables/archive/component-standards/` | 历史组件标准，仅作参考 |
 
-建议建立的 Document Library metadata：**Asset Type、DRIVE ID、End User、PMO Manager、Technical Analyst、ERP Consultant、Status、Effective Date、Review Date、Confidentiality**。
+DRIVE 是 enhancement 编号，不是 Word 文档类型。建议建立的 Document Library metadata：**Asset Type、DRIVE ID、End User、PMO Manager、Technical Analyst、ERP Consultant、Status、Effective Date、Review Date、Confidentiality**。
 
 ## Home Page 搭建顺序
 
