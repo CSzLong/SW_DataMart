@@ -9,6 +9,9 @@ Use this folder as the single staff-download location.
 | `IV_Insight_and_Visualisation_Design_Template.docx` | Top Coat source, Power BI / Tableau, measures and code, dashboard design screenshot and publication location. |
 | `RP_Structured_Report_Design_Template.docx` | Top Coat source, required columns, Excel / Power BI / Tableau presentation and report sample. |
 | `EX_Extension_and_Integration_Design_Template.docx` | Access design, Power Apps data interface or Power Automate flow with security and operational controls. |
+| `DM_Data_Model_Template.xlsx` | Logical and physical APAC consumption model: entities, objects, grain, keys, relationships and changes. |
+| `DL_Data_Lineage_Template.xlsx` | Gold View-to-RC/SC/TC lineage, transformation rules, data-flow controls and downstream products. |
+| `DD_Data_Dictionary_Template.xlsx` | Field and metric definitions, reference and rollup rules, plus WHO / WHEN audit attributes. |
 | `DRIVE_Delivery_Register_Template.csv` | Portfolio, SharePoint List or Excel register of DRIVE items and their owners/status. |
 
-Start with DRIVE, then create the applicable DA, IV, RP and EX documents. Record each filename or SharePoint link in DRIVE's component-document register.
+Start with DRIVE, then create the applicable DA, IV, RP and EX documents. When a subject area's foundation changes, update its Data Model, Data Lineage and Data Dictionary workbooks as well. Record each filename or SharePoint link in DRIVE's component-document register.

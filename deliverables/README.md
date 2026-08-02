@@ -7,6 +7,8 @@ This folder contains the English architecture pack generated from the project RE
 - `SW_DataMart_Architecture_Overview_Current.pptx` — current executive presentation covering Global EDI ownership, the Refined / Sealer / Top Coat flow, DA / IV / RP / EX, and the four operating roles.
 - `documentation/` — the active integrated DRIVE technical-design specification.
 - `template-library/` — the single staff-download location for the master template and delivery register.
+- `template-library/DM_Data_Model_Template.xlsx`, `DL_Data_Lineage_Template.xlsx`, and `DD_Data_Dictionary_Template.xlsx` — the maintained Excel foundations for the APAC consumption model, field lineage and business definitions.
+- `personal-guidance/` — private Chinese guidance for using the SharePoint blueprint and presentation; keep it outside the team-facing English site.
 - `archive/component-standards/` — previous component-specific standards retained only as reference history.
 - `../sharepoint-site/` — a local, multi-page SharePoint Site Home Page prototype with navigation and template downloads.
 - `SW_DataMart_Architecture_Hub.html` — local, browsable architecture hub; double-click to open it in a browser.
