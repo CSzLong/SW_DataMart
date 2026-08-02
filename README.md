@@ -139,7 +139,7 @@ Fact（累积快照事实表）：跟踪一个流程从开始到结束的多个�
 
 ### APAC Consumption Architecture
 
-The Global EDI Gold View is the approved upstream data product. Global EDI owns source extraction and enterprise ETL. The following patterns describe only how APAC prepares that curated output for governed local consumption; they are not a second enterprise ingestion architecture.
+Global EDI uses a Medallion 3-tier data warehouse and publishes the approved Gold View as the upstream data product. Global EDI owns source extraction and enterprise ETL. The following Coats describe only how APAC prepares that curated output for governed local consumption; they are not a second enterprise ingestion architecture.
 
 | Logical function | Existing object code | Physical form | Responsibility |
 |---|---|---|---|

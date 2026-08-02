@@ -2,7 +2,7 @@
 
 ## Primary controlled document
 
-`DRIVE-001_Integrated_Technical_Design_Specification.docx` is the single primary development requirement and technical-design standard. It integrates the applicable DA, VI, RP and EX requirements into one controlled document, with business logic, technical logic, lineage, semantic model, validation, operations and release controls.
+`DRIVE-001_Integrated_Technical_Design_Specification.docx` is the overall enhancement design. It captures business purpose, business logic, the component-document register, end-to-end Coat flow, final-result evidence, validation and release controls.
 
 ## Template Library
 
@@ -13,7 +13,7 @@ Staff should begin at `../template-library/`:
 
 ## Classification convention
 
-DRIVE remains the overarching portfolio language: Data, Report, Insight, Validation and Extension. Within the integrated specification, use DA, VI, RP and EX IDs to identify actual components. Validation is mandatory across every component.
+DRIVE remains the overarching portfolio language: Data, Report, Insight, Validation and Extension. Within the enhancement design, use DA, IV, RP and EX IDs to identify actual component documents. Validation is mandatory across every component.
 
 ## Reference history
 

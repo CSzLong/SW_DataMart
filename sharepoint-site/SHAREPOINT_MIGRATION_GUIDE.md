@@ -33,11 +33,15 @@ Upload the following repository content:
 | SharePoint location | Repository source | Purpose |
 |---|---|---|
 | `01 Active Specifications/` | `deliverables/documentation/DRIVE-001_Integrated_Technical_Design_Specification.docx` | Current governed master specification |
-| `02 Staff Templates/` | `deliverables/template-library/DRIVE_Integrated_Technical_Design_Template.docx` | Staff authoring template |
+| `02 Staff Templates/` | `deliverables/template-library/DRIVE_Integrated_Technical_Design_Template.docx` | Overall DRIVE enhancement design |
+| `02 Staff Templates/` | `deliverables/template-library/DA_Data_Architecture_Design_Template.docx` | Data Architecture design template |
+| `02 Staff Templates/` | `deliverables/template-library/IV_Insight_and_Visualisation_Design_Template.docx` | Insight & Visualisation design template |
+| `02 Staff Templates/` | `deliverables/template-library/RP_Structured_Report_Design_Template.docx` | Structured Report design template |
+| `02 Staff Templates/` | `deliverables/template-library/EX_Extension_and_Integration_Design_Template.docx` | Extension & Integration design template |
 | `02 Staff Templates/` | `deliverables/template-library/DRIVE_Delivery_Register_Template.csv` | Initial register/list structure |
-| `03 Reference Standards/` | `deliverables/archive/component-standards/` | Historical DA / VI / RP / EX component standards |
+| `03 Reference Standards/` | `deliverables/archive/component-standards/` | Historical component standards |
 
-Recommended library metadata: **Asset Type**, **DRIVE ID**, **Business Owner**, **Technical Owner**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
+Recommended library metadata: **Asset Type**, **DRIVE ID**, **End User**, **PMO Manager**, **Technical Analyst**, **ERP Consultant**, **Status**, **Effective Date**, **Review Date**, and **Confidentiality**.
 
 ## Home Page build sheet
 
@@ -50,7 +54,7 @@ Build the Home page in the following order. The wording is already available in 
 | Start here | Text + Quick Links | Three links: Describe the business question, choose the delivery type, use the shared template. |
 | DRIVE delivery lifecycle | Text + five-column section | Register → Define → Design → Validate → Release & operate. |
 | Latest workspace updates | News or Text | Add the three current update cards from the local Home page. |
-| Where the data comes from | Text + five-column section | Explain Global EDI Gold View, APAC consumption preparation, definitions, governed outputs and business value. |
+| Global EDI ownership and APAC Coat terminology | Text + five-column section | Explain Global EDI Medallion 3-tier warehouse and Gold View, then Refined Coat (RC), Sealer Coat (SC), Top Coat (TC) and business output. |
 | Quick access | Quick Links | How Data Is Prepared, Trust & Governance, Template Library. |
 
 Use the title **SW Data Mart** and subtitle **DRIVE Workspace**. Keep the language in English for consistency with the design specification.
@@ -58,7 +62,7 @@ Use the title **SW Data Mart** and subtitle **DRIVE Workspace**. Keep the langua
 ## Detail pages
 
 - **Request & Delivery:** use the `pages/drive-workspace.html` content. Add a prominent link to the active specification and a Quick Link to the delivery register.
-- **How Data Is Prepared:** use `pages/architecture.html`. Present the Global EDI Gold View → APAC consumption preparation → certified consumption view → business output flow as a Process web part.
+- **How Data Is Prepared:** use `pages/architecture.html`. Present the Global EDI Gold View → Refined Coat (RC) → Sealer Coat (SC) → Top Coat (TC) → business output flow as a Process web part, and state the Global EDI ownership boundary.
 - **Trust & Governance:** use `pages/governance.html`. Use a table for role ownership and delivery gates.
 - **Template Library:** use `pages/template-library.html`. Add a **Document Library** web part filtered to `02 Staff Templates/` and `01 Active Specifications/`; this makes files downloadable without maintaining individual links.
 
