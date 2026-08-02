@@ -4,6 +4,8 @@
 
 本指南用于在公司电脑上，把仓库中的本地原型迁移为 SharePoint **Communication Site**。本地页面 [index.html](index.html) 是内容和版式蓝图；正式 Site 应使用 Microsoft 365 的标准 Web Part，不建议嵌入或直接发布自定义 HTML。
 
+如需逐点击执行，请使用 [SHAREPOINT_DEPLOYMENT_RUNBOOK_CN.md](SHAREPOINT_DEPLOYMENT_RUNBOOK_CN.md)。
+
 ## 最重要的文件库说明
 
 请在 SharePoint 的 **Site contents（站点内容）** 中选择 **New → Document library**，创建一个新的文档库：
